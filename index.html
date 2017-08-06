@@ -1,53 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	 <meta charset="UTF-8">
+	 <link rel="stylesheet" type="text/css" href="css/reset.css"> 
+   <link rel="stylesheet" type="text/css" href="style.css">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+   <link rel="stylesheet" href="https://bootswatch.com/cerulean/bootstrap.min.css">
+	 <title></title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script scr="libraries/p5.dom.js" type="text/javascript"></script>
+   <script src=p5.dom.js></script>
 </head>
 <body>
 
-<div class="box">
-<div id="hline"></div>
-<div>
-<p class ="APC">About Portafolio Contact</p>
-<div id="vline"></div>
-<div id="vline2"></div>
-</div>
-<div class="box1">
-<div class="bottom">
+ <div id="game"></div> 
+ 
 
-</div>
-</div>
-</div>
-</div>
 
-<div class="wrap">
-<section id="content">
-<div class="h1">
-<h1>Reyna Perez</h1>
-</div>
-<div class="h2">
-<div class="h3">
-<h3>Connect with Me</h3>
-<hr color=#d7d7d7 align= center width=80% style="padding-left:10px;" style="padding-right:10px;">
-<img class= "logogit" src="assets/images/if_github-square-social-media_764894.png" height="62" width="62">
-<img class= "logolink" src="assets/images/if_linkedin_1783361.png" height="62" width="62">
-<img class= "logofeed" src="assets/images/if_feed_1783367.png">
-</div>
-<div class="p">
-<p class= "about"><strong> About Me </strong>
-<hr color=#d7d7d7 style="padding-left:30px;" style="padding-right:30px;">
-<img class="img" src="assets/images/Reyna.jpg" height="160" width="110" class="center">
-<br> <p>I am originally from Mexico City, love mexican food and I am so happy I know how to cook it. I moved in USA since 1993 and I have had the opportunity to live in different states, in Utah where I have seen the most beautiful mountain call Timpanogos, I lived there for 9 years and I really loved it, I lived in San Diego, it has an awesome weather and many places to visit, then I lived in Wisconsin, the coldest state in USA that is what I think, in winter as soon  as you put you foot out of the door your nose turn red and your ears are so cold and hard if someone touch them, they could break, but I really like its landscapes and the cheese. Now I live in AZ a happy state because the mayority of the days the sun is out, different landscapes I really like living here.
-</p>
-</p>
-</div>
+ <script type="text/javascript">    
 
-<div class="copyright">
-<footer>Copyright 2017 Reyna Perez</footer>
-</div>
-</section>
+     var letters =["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+     var youWin = 0;
+     var youLose = 0;
+     var GuessesLeft = 10;
+     var YourGuessessoFar = [];
 
+     var computerGuess = letters[Math.floor(Math.random()*letters.length)];
+
+     console.log(computerGuess);
+
+    	 
+  document.onkeyup = function() {
+
+
+      var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+
+      console.log(userGuess);
+
+
+    if (userGuess == computerGuess) {
+        youWin++;
+        GuessesLeft=10;
+        YourGuesssoFar=[];
+        alert("You won!!" + youWin);
+       
+     }
+     
+    else  {
+        GuessesLeft --;
+        YourGuessessoFar.push(userGuess);
+     }
+
+    if (GuessesLeft == 0) {
+        youLose++;
+        GuessesLeft=10;
+        YourGuessessoFar=[];
+      }
+     
+   
+
+
+
+   var html = "<div class='jumbotron'></div>" +
+              "<p class='h1'>The Psychic Game</p>" + 
+              "<p class='h2'>Guess what letter I'am guessing</p>" + "<hr>" +
+              "<strong><p class='t1'>You Win: " + youWin + "</p></strong>" + "<hr>" +
+              "<strong><p class='t2'>You Lose: " + youLose + "</p></strong>" + "<hr>" +
+              "<strong><p class='t3'>Guesses Left: " + GuessesLeft + "</p></strong>" + "<hr>" +
+              "<strong><p class='t4'>Your Guesses so Far: " + YourGuessessoFar + "</p></strong>" +"<hr>" +
+              "<div class='jumbotron'></div>";
+
+              document.querySelector('#game').innerHTML =html; 
+              
+
+                    
+}
+
+
+</script> 
+
+  
 </body>
 </html>
