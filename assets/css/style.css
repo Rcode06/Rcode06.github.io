@@ -1,0 +1,119 @@
+
+body {
+	background-image: url("../images/image6.jpg");
+}
+
+.jumbotron{
+	background-image: url("../images/image1.jpg");
+    margin-bottom: 0;`
+    min-height: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;   
+
+}
+
+.jumbotron h1{
+	background-color: #E6E6FA;
+	font-size: 40px;
+	text-align: center;
+	font-family:sans-serif;
+
+}
+
+.game-crystal{
+	background-color:#99d5cf;
+	height: 140px;
+}
+
+.p{
+	color:#660066;
+	font-size:10px;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	/*padding-top: 15px*/
+}
+.inst{
+	color:#660066;
+	font-size:15px;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	
+}
+.computer-choice {
+	margin-top:20px;
+	background-color:#E6E6FA;
+	height: 100px;
+}
+
+#pcomputerChoice{
+	padding:15px;
+	font-size:50px;
+	text-align: center;
+}
+.results {
+	margin:20px;
+	background-color:#433e90;
+	height: 100px;
+}
+
+.youWon {
+	padding-top:10px;
+	padding-left:5px;
+	color:white;
+	font-size: 2px
+	font-family: 'Montserrat', sans-serif;
+
+}
+
+.wins{
+	color:#E6E6FA;
+	font-family: 'Montserrat', sans-serif;
+	padding-left:30px;
+	padding-top:16px;
+	font-size: 20px;
+}
+
+.losses{
+	color:#d896ff;
+	font-family: 'Montserrat', sans-serif;
+	padding-left:30px;
+	font-size: 20px;
+}
+
+img {
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+}
+
+
+
+.totalscore{
+	background-color:#99d5cf;
+	height: 30px;
+    margin-top:20px;
+}
+.ptotalscore{
+	color:#660066;
+	text-align: center;
+	font-size: 15px
+	padding-top:25px;
+}
+.score{
+	background-color:#E6E6FA;
+	height: 80px;
+    margin-top:20px;
+}
+#totaladdition{
+	color:#660066;
+	padding-top:7px;
+	text-align: center;
+	font-size: 50px
+	
+}
+
+
+
+

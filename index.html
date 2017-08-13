@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+		 <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> 
+	     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	     <link rel="stylesheet" href="https://bootswatch.com/cerulean/bootstrap.min.css">
+		 <title></title>
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		 <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>  
+		
+		 
+</head>
+</head>
+<body>
+<div id = "game"></div>
+<div class="container">
+  <div class="jumbotron">
+    <h1>CRYSTALS COLLECTOR!</h1> 
+    <p></p> 
+  </div>
+  
+   
+</div>
+<!---           Instructions            -->
+<div class="container">
+   <div class="row">
+    <div class="col-md-2" ></div>
+      <div class="game-crystal col-md-8" >
+  	
+  	<h1 class = "inst"><strong>INSTRUCTIONS</strong></h1>
+  	<p class = "p">
+  
+    You will be given a random number at the start of the game.
+  	<br>
+  	There are four crystals below. By clicking on a crystal you will add a 
+  	specific amount of your total score.
+  	<br>
+  	You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.
+  	<br>
+  	The value of each crystal is hidden from you until you click on it.
+  	<br>
+    Each time when the game starts, the game will change the values of each crystal.
+  	</p>
+
+  </div>
+  <div class="col-md-2" ></div>
+
+<!---           Guesses Left           -->
+
+<div class="row">
+     <div class="col-md-4" ></div>
+      <div class="computer-choice col-md-2" >
+       <p id = "pcomputerChoice"></p>
+ </div>
+ <!---           Results               -->
+
+   <div class="results col-md-2" >
+  	 
+  	  <p class="wins"> </p> 
+  	  <p class="losses"> </p> 
+
+   </div>
+
+     <div class="col-md-4" ></div> 
+    <button class="btn btn-danger" id="reset">Reset</button>
+
+<!---           Buttons             -->
+  <!-- <div class="container"> -->
+    <div class="row col-sm-9 center-block">
+        <div class="col-xs-4" ></div> 
+	     	<img id="redCrystal" src="./assets/images/imgcrystal1.jpg" class=" img-responsive img-center col-sm-2">
+	     	<img id="blueCrystal" src="./assets/images/imgcrystal.jpg" class="img-responsive img-center col-sm-2">
+	     	<img id="yellowCrystal" src="./assets/images/imgcrystal3.jpg" class="img-responsive img-center col-sm-2">
+	     	<img id="greenCrystal" src="./assets/images/imgcrystal4.jpg" class="img-responsive img-center col-sm-2">
+     	<div class="col-sm-2" ></div> 
+     	
+</div>
+
+<!---           Score            -->
+
+    <div class="row">
+        <div class=" col-md-4" ></div>
+          <div class="totalscore col-md-4">
+             <p class="ptotalscore">Your total score is:</p>
+          </div>
+    </div> 
+    <div class="row">
+        <div class=" col-md-4" ></div>
+          <div class="score col-md-4">
+             <p id = "totaladdition"></p>
+    </div>
+    </div> 
+ <script type="text/javascript" src="./assets/javascript/game.js"></script> 
+
+
+
+</body>
+</html>
+
+
+
+
+
+
