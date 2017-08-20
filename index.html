@@ -1,107 +1,104 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-		 <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> 
-	     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	     <link rel="stylesheet" href="https://bootswatch.com/cerulean/bootstrap.min.css">
-		 <title></title>
-		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		 <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>  
-		
-		 
-</head>
-</head>
-<body>
-<div id = "game"></div>
-<div class="container">
-  <div class="jumbotron">
-    <h1>CRYSTALS COLLECTOR!</h1> 
-    <p></p> 
-  </div>
-  
-   
-</div>
-<!---           Instructions            -->
-<div class="container">
-   <div class="row">
-    <div class="col-md-2" ></div>
-      <div class="game-crystal col-md-8" >
-  	
-  	<h1 class = "inst"><strong>INSTRUCTIONS</strong></h1>
-  	<p class = "p">
-  
-    You will be given a random number at the start of the game.
-  	<br>
-  	There are four crystals below. By clicking on a crystal you will add a 
-  	specific amount of your total score.
-  	<br>
-  	You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.
-  	<br>
-  	The value of each crystal is hidden from you until you click on it.
-  	<br>
-    Each time when the game starts, the game will change the values of each crystal.
-  	</p>
+  <head>
+    <meta charset="UTF-8">
+    <title>jQuery TriviaGame</title>
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
 
-  </div>
-  <div class="col-md-2" ></div>
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-<!---           Guesses Left           -->
+    <link rel="stylesheet" type="text/css"   href="assets/css/style.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
-<div class="row">
-     <div class="col-md-4" ></div>
-      <div class="computer-choice col-md-2" >
-       <p id = "pcomputerChoice"></p>
- </div>
- <!---           Results               -->
+  </head>
+  <body>
 
-   <div class="results col-md-2" >
-  	 
-  	  <p class="wins"> </p> 
-  	  <p class="losses"> </p> 
-
-   </div>
-
-     <div class="col-md-4" ></div> 
-    <button class="btn btn-danger" id="reset">Reset</button>
-
-<!---           Buttons             -->
-  <!-- <div class="container"> -->
-    <div class="row col-sm-9 center-block">
-        <div class="col-xs-4" ></div> 
-	     	<img id="redCrystal" src="./assets/images/imgcrystal1.jpg" class=" img-responsive img-center col-sm-2">
-	     	<img id="blueCrystal" src="./assets/images/imgcrystal.jpg" class="img-responsive img-center col-sm-2">
-	     	<img id="yellowCrystal" src="./assets/images/imgcrystal3.jpg" class="img-responsive img-center col-sm-2">
-	     	<img id="greenCrystal" src="./assets/images/imgcrystal4.jpg" class="img-responsive img-center col-sm-2">
-     	<div class="col-sm-2" ></div> 
-     	
-</div>
-
-<!---           Score            -->
-
-    <div class="row">
-        <div class=" col-md-4" ></div>
-          <div class="totalscore col-md-4">
-             <p class="ptotalscore">Your total score is:</p>
-          </div>
-    </div> 
-    <div class="row">
-        <div class=" col-md-4" ></div>
-          <div class="score col-md-4">
-             <p id = "totaladdition"></p>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>TOTALLY TRIVIAL TRIVIA!</h1> 
+      </div>
     </div>
-    </div> 
- <script type="text/javascript" src="./assets/javascript/game.js"></script> 
+
+    <div class="container" id="main-body">
+      <!-- <div class="row">  -->
+        <div class="game-start" >     
+          <button type="button" class="btn btn-default btn-lg center-block" id="start">Start</button>          
+        </div>
+
+         <div class="game-questions">
+       
+            <div id="timing">Time Remaining:<span id="timer">10</span> seconds</div>
+        
+              <form name="quiz">
+
+            
+              <h4 class= "firstq">What was the first Walt Disney film?</h4>
+              <div id="disney">
+               <input type="radio"  value="peter pan"  name="q1" id="q1a">Peter Pan              
+               <input type="radio"  value="snow white"  name="q1" id="q1b">Snow White
+               <input type="radio"  value="pinochio"  name="q1" id="q1c">Pinochio
+               <input type="radio"  value="dumbo"  name="q1" id="q1d">Dumbo
+               </div>
+
+                <h4 class ="secondq"> Who sings Despacito?</h4> 
+                <div id="despacito">            
+                 <input type="radio"  value="luis fonsi"    name="q2" id="q1a">Luis Fonsi
+                 <input type="radio"  value="justin bieber" name="q2" id="q2a">Justin Bieber
+                 <input type="radio"  value="mark anthony"  name="q2" id="q3a">Mark Anthony
+                 <input type="radio"  value="selena gomez"  name="q2" id="q4a">Selena Gomez
+                </div>
+
+                 <h4 class ="thirdq"> How many gold medals did Michael Phelps <br> won in the 2008 olympics?</h4>
+                 <div id ="medals">       
+                 <input type="radio"  value="5" name="q3" id="q1a">5
+                 <input type="radio"  value="7" name="q3" id="q2a">7
+                 <input type="radio"  value="8" name="q3" id="q3a">8
+                 <input type="radio"  value="9" name="q3" id="q4a">9
+                 </div>
+
+                <h4 class="fourthq">How depth is the Grand Canyon?</h4>
+                 <div id ="canyon">
+                 <input type="radio"  value="a" name="q4" id="q1a">7,055'5
+                 <input type="radio"  value="b" name="q4" id="q2a">8,200'0
+                 <input type="radio"  value="c" name="q4" id="q3a">7,310'2
+                 <input type="radio"  value="d" name="q4" id="q4a">6,093′0
+                 </div>
+
+                 <h4 class ="fifthq">The most popular song in the world is a Disney one<br> Which one is it?</h4>
+                 <div id ="song">
+                 <input type="radio"  value="let it go"                  name="q5" id="q1a">Let it go
+                 <input type="radio"  value="drumroll"                   name="q5" id="q2a">Drumroll
+                 <input type="radio"  value="its a small world"          name="q5" id="q3a">Its a small world
+                 <input type="radio"  value="i'll make a man out of you" name="q5" id="q4a">I'll make a man out of you
+                 </div>
+
+          
+             <!-- <input type="submit" class="btn1 btn-danger btn-lg center-block" value="Submit Answers" id="finish"> -->
+             <button  type="submit" class="btn1 btn-danger btn-lg center-block" id="finish">Submit</button>
+ 
+            </form>
+     
+          </div>  <!-- .game questions div closes --> 
+   
+
+              <div id="game-results" >
+               
+                 <h1 id="done">ALL DONE!</h1>
+                 <p id="correctA">Correct Answers:4</p>
+                 <p id="incorrect">Incorrect Answers:1</p>
+                 <p id="unanswered">Unanswered:0</p>
+                   
+              </div>
+
+  
+        </div> <!--  containter closes-->
 
 
+ 
 
-</body>
+
+  </body>
 </html>
-
-
-
-
-
-
