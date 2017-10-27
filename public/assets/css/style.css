@@ -1,0 +1,61 @@
+html {
+	
+ 	background-image: url("../img/fruits.jpg");
+
+ }
+
+ body {
+ 	width: 73%;
+	margin: 0 auto; 
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	background-color: white;
+ }
+
+
+ #burger-box {
+ 	display: block;
+    margin: auto;
+ }
+
+
+ .yesBurger {
+ 	background-color: #f5f5dc;
+ 	font-family: 'Courgette', cursive;
+ 	font-weight: normal;
+ 	font-size: 20px;
+ 	text-align: center;
+ 	border-radius: 15px;
+ 	width: 100%;
+ 	margin: 10px;
+ 	padding: 10px;
+ 	background-color: #f5f5dc;
+ 	border: none;
+ }
+
+
+
+ .noBurgers {
+ 	background-color: #fa8072;
+ 	font-family: 'Courgette', cursive;
+ 	font-size: 20px;
+ 	text-align: center;
+ 	border-radius: 15px;
+ 	margin: 10px;
+ 	padding: 10px;
+ 	
+ }
+
+ h4 {
+  	text-align: center;
+ 	font-family: 'arial', cursive;
+ 	font-size: 40px;
+ 	margin: 50px;
+ 	font-weight: bold;
+ 	color:	#f37735;
+ }
+
+
+
+
